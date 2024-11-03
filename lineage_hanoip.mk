@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/motorola/hanoip/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/styx/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := styx_hanoip
+PRODUCT_NAME := lineage_hanoip
 PRODUCT_DEVICE := hanoip
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g(60)
@@ -40,13 +40,11 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Styx Stuff
 TARGET_BOOT_ANIMATION_RES := 1080
-PRODUCT_PRODUCT_PROPERTIES += \
-  org.styxproject.maintainer=isg32
 
 # Build info
 BUILD_FINGERPRINT := "motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=hanoip_retail \
-    PRIVATE_BUILD_DESC="hanoip_retail-user 11 S2RI32.32-20-9-9-2 1591b release-keys"
+    DeviceProduct=hanoip_retail \
+    BuildDesc="hanoip_retail-user 11 S2RI32.32-20-9-9-2 1591b release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
