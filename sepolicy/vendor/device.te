@@ -6,3 +6,6 @@ type vl53l1_device, dev_type;
 
 # Thermal
 type thermal_device, dev_type;
+
+# Pixel Perfmanager
+type latency_device, dev_type;
