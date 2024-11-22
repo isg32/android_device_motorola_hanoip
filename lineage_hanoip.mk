@@ -38,8 +38,18 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2460
 TARGET_SCREEN_WIDTH := 1080
 
-# Styx Stuff
+# Default is COMMUNITY. official builds are OFFICIAL
+CUSTOM_BUILD_TYPE := OFFICIAL
+
+# Set your name for display in banner.
+CUSTOM_MAINTAINER := isg32
+
+# Boot animation resolution, choose from 480, 720, 1080, 1440.
+# Default is 1080
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# If you want to build vanilla, set false.
+WITH_GMS := true
 
 # Build info
 BUILD_FINGERPRINT := "motorola/hanoip_retail/hanoip:11/S2RI32.32-20-9-9-2/1591b:user/release-keys"
