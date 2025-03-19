@@ -46,3 +46,17 @@ install_symlink {
     installed_location: "super_modem/.keep",
     symlink_target: "/dev/null",
 }
+
+
+filegroup {
+    name: "hanoip_makefiles",
+    srcs: glob(["**/*.mk"]),
+}
+
+genrule {
+    name: "include_hanoip_makefiles",
+    srcs: [":hanoip_makefiles"],
+    out: ["dummy"],
+    cmd: "true",
+    enabled: is_equal("$(TARGET_DEVICE)", "hanoip"),
+}
