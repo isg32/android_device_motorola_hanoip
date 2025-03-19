@@ -1,0 +1,82 @@
+ // SPDX-FileCopyrightText: 2024 The LineageOS Project
+ // SPDX-License-Identifier: Apache-2.0
+
+soong_namespace {}
+
+filegroup {
+    name: "fstab_qcom",
+    srcs: ["etc/fstab.qcom"],
+}
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "etc/fstab.qcom",
+    sub_dir: "vendor/etc",
+}
+
+// Init scripts
+filegroup {
+    name: "init_scripts",
+    srcs: [
+        "bin/init.class_main.sh",
+        "bin/init.crda.sh",
+        "bin/init.mmi.laser.sh",
+        "bin/init.mmi.touch.sh",
+        "bin/init.mmi.usb.sh",
+        "bin/init.oem.fingerprint.sh",
+        "bin/init.oem.fingerprint2.sh",
+        "bin/init.oem.hw.sh",
+        "bin/init.qcom.class_core.sh",
+        "bin/init.qcom.coex.sh",
+        "bin/init.qcom.crashdata.sh",
+        "bin/init.qcom.early_boot.sh",
+        "bin/init.qcom.efs.sync.sh",
+        "bin/init.qcom.sdio.sh",
+        "bin/init.qcom.sensors.sh",
+        "bin/init.qcom.sh",
+        "bin/init.qti.fm.sh",
+        "bin/init.qti.ims.sh"
+    ],
+}
+
+prebuilt_etc {
+    name: "init.hanoip.rc",
+    src: "etc/init.hanoip.rc",
+    sub_dir: "vendor/etc/init/hw",
+}
+
+prebuilt_etc {
+    name: "init.mmi.overlay.rc",
+    src: "etc/init.mmi.overlay.rc",
+    sub_dir: "vendor/etc/init/hw",
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "etc/init.qcom.rc",
+    sub_dir: "vendor/etc/init/hw",
+}
+
+prebuilt_etc {
+    name: "init.qcom.power.rc",
+    src: "etc/init.qcom.power.rc",
+    sub_dir: "vendor/etc/init/hw",
+}
+
+prebuilt_etc {
+    name: "init.recovery.qcom.rc",
+    src: "etc/init.recovery.qcom.rc",
+    sub_dir: "recovery/root",
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "vendor/etc/init/hw",
+}
+
+prebuilt_etc {
+    name: "ueventd.qcom.rc",
+    src: "ueventd.rc",
+    sub_dir: "vendor/etc",
+}
